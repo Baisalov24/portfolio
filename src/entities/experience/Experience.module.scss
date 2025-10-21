@@ -10,7 +10,6 @@
   margin-bottom: 18px;
 }
 
-/* Контейнер фиксированной ширины (как договорились) */
 .timeline {
   position: relative;
   max-width: 980px;
@@ -18,7 +17,7 @@
   padding: 16px 0 8px;
 }
 
-/* Центральная вертикальная линия */
+
 .line {
   position: absolute;
   left: 50%;
@@ -36,18 +35,18 @@
   padding: 0;
 }
 
-/* Один элемент таймлайна */
+
 .item {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* слева пусто, справа карточка */
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: start;
   margin: 14px 0;
   min-height: 48px;
 }
 
-/* Точка на линии (по центру) */
+
 .dot {
   position: absolute;
   left: 50%;
@@ -62,7 +61,6 @@
     0 0 10px #ffffff55;
 }
 
-/* Карточка справа — glass стиль */
 .card {
   grid-column: 2 / 3;
   background: rgba(0, 0, 0, 0.30);
@@ -93,7 +91,7 @@
   box-shadow: 0 2px 8px rgba(255,255,255,0.25);
 }
 
-.meta {}
+// .meta {}
 .date {
   font-size: 12px;
   color: #cfd6e6;
@@ -116,7 +114,7 @@
   margin-top: 6px;
 }
 
-/* Анимация появления при скролле */
+
 .reveal {
   opacity: 0;
   transform: translateY(12px);
@@ -127,7 +125,6 @@
   transform: translateY(0);
 }
 
-/* Мобильная адаптация: карточка переезжает под линию (full width) */
 @media (max-width: 860px) {
   .item {
     grid-template-columns: 1fr;
@@ -136,7 +133,7 @@
     grid-column: 1 / 2;
   }
   .line {
-    left: 24px; /* смещаем линию к левому краю */
+    left: 24px; 
     transform: translateX(0);
   }
   .dot {

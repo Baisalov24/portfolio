@@ -15,7 +15,7 @@ export function Experience() {
   const [items, setItems] = useState([])
   const refs = useRef([])
 
-  // Подтягиваем данные из JSON (как договорились)
+
   useEffect(() => {
     import('../../shared/data/experience.json').then((m) => {
       const arr = Array.isArray(m.default) ? m.default : []
@@ -23,7 +23,7 @@ export function Experience() {
     })
   }, [])
 
-  // Анимация появления карточек при скролле
+
   useEffect(() => {
     if (!refs.current?.length) return
     const io = new IntersectionObserver(
@@ -48,7 +48,6 @@ export function Experience() {
       <h2 className={styles.title}>My Experience</h2>
 
       <div className={styles.timeline}>
-        {/* центральная вертикальная линия */}
         <div className={styles.line} />
 
         <ul className={styles.list}>
@@ -64,10 +63,10 @@ export function Experience() {
                 className={`${styles.item} ${styles.reveal}`}
                 ref={(el) => (refs.current[idx] = el)}
               >
-                {/* точка на линии */}
+                
                 <span className={styles.dot} />
 
-                {/* карточка справа от линии */}
+                
                 <article className={styles.card}>
                   <header className={styles.cardHeader}>
                     <div className={styles.iconWrap}>

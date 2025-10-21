@@ -3,7 +3,6 @@ import { HomePage } from '@pages/home/HomePage'
 import { AboutPage } from '@pages/about/AboutPage'
 import { ProjectsPage } from '@pages/projects/ProjectsPage'
 import { ContactPage } from '@pages/contact/ContactPage'
-// import { Layout } from '../../shared/ui/Layout/Layout.jsx'
 
 
 export function AppRouter() {
