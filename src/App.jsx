@@ -1,12 +1,9 @@
-import './App.css'
+import { AppRouter } from './app/router/AppRouter'
 
-function App() {
- 
+export default function App() {
   return (
-    <div>
-    
+    <div style={{ color: 'white', padding: 20 }}>
+      <AppRouter />
     </div>
   )
 }
-
-export default App
