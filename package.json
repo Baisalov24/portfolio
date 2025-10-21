@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.4",
+    "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4",
+    "react-vertical-timeline-component": "^3.5.3",
     "sass": "^1.93.2"
   },
   "devDependencies": {

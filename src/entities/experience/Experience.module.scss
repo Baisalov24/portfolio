@@ -1,0 +1,145 @@
+.section {
+  padding: 48px 0 8px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Контейнер фиксированной ширины (как договорились) */
+.timeline {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px 0 8px;
+}
+
+/* Центральная вертикальная линия */
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #ffffff22, #ffffff11);
+  transform: translateX(-1px);
+  pointer-events: none;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Один элемент таймлайна */
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* слева пусто, справа карточка */
+  gap: 20px;
+  align-items: start;
+  margin: 14px 0;
+  min-height: 48px;
+}
+
+/* Точка на линии (по центру) */
+.dot {
+  position: absolute;
+  left: 50%;
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  box-shadow:
+    0 0 0 3px #ffffff20,
+    0 0 10px #ffffff55;
+}
+
+/* Карточка справа — glass стиль */
+.card {
+  grid-column: 2 / 3;
+  background: rgba(0, 0, 0, 0.30);
+  border: 1px solid #1f2433;
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 14px 16px 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.cardHeader {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.iconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0b0d12;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.25);
+}
+
+.meta {}
+.date {
+  font-size: 12px;
+  color: #cfd6e6;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.company {
+  font-size: 13px;
+  color: #cfd6e6;
+  margin-top: 2px;
+}
+.desc {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* Анимация появления при скролле */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Мобильная адаптация: карточка переезжает под линию (full width) */
+@media (max-width: 860px) {
+  .item {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    grid-column: 1 / 2;
+  }
+  .line {
+    left: 24px; /* смещаем линию к левому краю */
+    transform: translateX(0);
+  }
+  .dot {
+    left: 24px;
+  }
+}

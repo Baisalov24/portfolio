@@ -1,9 +1,11 @@
-import { AppRouter } from './app/router/AppRouter'
+import { Presentation } from './entities/presentation/Presentation.jsx'
+import { Experience } from './entities/experience/Experience.jsx'
 
 export default function App() {
   return (
-    <div style={{ color: 'white', padding: 20 }}>
-      <AppRouter />
+    <div>
+      <Presentation />
+      <Experience />
     </div>
   )
 }

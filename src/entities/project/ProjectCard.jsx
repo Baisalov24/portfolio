@@ -1,7 +1,6 @@
 import styles from './ProjectCard.module.scss'
 
 export function ProjectCard({ project }) {
-  // Поддержка разных названий полей из старого проекта:
   const id = project.id || project._id || project.key || project.title
   const title = project.title || project.name || 'Untitled project'
   const description = project.description || project.desc || ''
@@ -11,7 +10,6 @@ export function ProjectCard({ project }) {
   const image = project.image || project.cover || project.preview || ''
 
   const onCardClick = (e) => {
-    // Не уводим по клику, если нажали на кнопки внутри
     const isButton = e.target?.closest('a,button')
     if (isButton && isButton.dataset?.role === 'cta') return
     if (demo && demo !== '#') window.open(demo, '_blank', 'noopener,noreferrer')
