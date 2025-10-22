@@ -1,13 +1,13 @@
 [
-  { "id": "react", "title": "React", "icon": "react", "desc": "SPA, hooks, composition, оптимизация рендера." },
-  { "id": "ts", "title": "TypeScript", "icon": "typescript", "desc": "Типобезопасность, интерфейсы, утил-типизация." },
-  { "id": "js", "title": "JavaScript", "icon": "javascript", "desc": "ES6+, async/await, модули, паттерны." },
-  { "id": "redux", "title": "Redux Toolkit", "icon": "redux", "desc": "Slices, RTK Query, нормализация данных." },
-  { "id": "html", "title": "HTML5", "icon": "html", "desc": "Семантика, доступность, SEO-основа." },
-  { "id": "css", "title": "CSS / SCSS", "icon": "css", "desc": "Layout, адаптив, модули, переменные." },
+  { "id": "react", "title": "React", "icon": "react", "desc": "SPA, hooks, composition" },
+  { "id": "ts", "title": "TypeScript", "icon": "typescript", "desc": "description" },
+  { "id": "js", "title": "JavaScript", "icon": "javascript", "desc": "ES6+, async/await" },
+  { "id": "redux", "title": "Redux Toolkit", "icon": "redux", "desc": "Slices, RTK Query" },
+  { "id": "html", "title": "HTML5", "icon": "html", "desc": "description" },
+  { "id": "css", "title": "CSS / SCSS", "icon": "css", "desc": "description" },
   { "id": "git", "title": "Git", "icon": "git", "desc": "Branching, PR flow, code review." },
-  { "id": "docker", "title": "Docker", "icon": "docker", "desc": "Контейнеризация, dev окружения." },
-  { "id": "mui", "title": "MUI", "icon": "mui", "desc": "Компоненты, тема, кастомизация." },
-  { "id": "tailwind", "title": "Tailwind", "icon": "tailwind", "desc": "Utility-first, быстрые прототипы." },
-  { "id": "auth0", "title": "Auth0", "icon": "auth0", "desc": "Аутентификация и авторизация." }
+  { "id": "docker", "title": "Docker", "icon": "docker", "desc": "description" },
+  { "id": "mui", "title": "MUI", "icon": "mui", "desc": "description" },
+  { "id": "tailwind", "title": "Tailwind", "icon": "tailwind", "desc": "description" },
+  { "id": "auth0", "title": "Auth0", "icon": "auth0", "desc": "description" }
 ]

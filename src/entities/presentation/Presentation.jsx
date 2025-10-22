@@ -5,11 +5,11 @@ export function Presentation() {
     <section className={styles.presentation}>
       <div className={styles.inner}>
         <h1 className={styles.title}>
-          Frontend developer with 2+ years of experience
+          Frontend developer
         </h1>
 
         <p className={styles.text}>
-          Hi, my name is Temirlan, and I am a frontend developer with 2+ years of
+          Hi, my name is Temirlan, and I am a frontend developer with 1.6 years of
           experience in modern web technologies. I specialize in building seamless,
           responsive, and high-performance web applications using React, JavaScript,
           TypeScript, Redux Toolkit, and RTK Query. I have a strong understanding of

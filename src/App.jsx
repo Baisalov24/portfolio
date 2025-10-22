@@ -2,6 +2,7 @@ import { Presentation } from './entities/presentation/Presentation.jsx'
 import { Experience } from './entities/experience/Experience.jsx'
 import { Skills } from './entities/skills/Skills.jsx'
 import { ProjectList } from './entities/project/ProjectList.jsx'
+import { Contacts } from './entities/contacts/Contacts.jsx'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <ProjectList />
       </section>
 
+      <Contacts />
     </div>
   )
 }

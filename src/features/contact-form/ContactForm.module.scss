@@ -1,0 +1,82 @@
+.wrap {
+  position: relative;
+  max-width: 680px;      
+  margin: 0 auto;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 50;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  animation: fadeIn 0.2s ease;
+}
+.success { background: #1d9b50; }
+.error   { background: #b83b3b; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Glass form */
+.form {
+  background: rgba(0, 0, 0, 0.30);
+  border: 1px solid #1f2433;
+  border-radius: var(--radius);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+  color: #fff;
+}
+
+.row { display: grid; gap: 6px; }
+
+.label {
+  font-size: 13px;
+  color: #cfd6e6;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid #2a3856;
+  background: #0f1528;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(106, 166, 255, 0.2);
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.btn {
+  justify-self: end;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+  &:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 0 12px rgba(106,166,255,0.4); }
+  &:disabled { opacity: 0.6; cursor: not-allowed; }
+}
