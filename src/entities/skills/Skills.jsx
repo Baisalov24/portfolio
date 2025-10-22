@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './Skills.module.scss'
 
-import { SiReact, SiTypescript, SiJavascript, SiRedux, SiHtml5, SiCss3, SiGit, SiDocker, SiMui, SiTailwindcss, SiAuth0 } from 'react-icons/si'
+import {
+  SiReact, SiTypescript, SiJavascript, SiRedux, SiHtml5, SiCss3,
+  SiGit, SiDocker, SiMui, SiTailwindcss, SiAuth0
+} from 'react-icons/si'
 
 const ICONS = {
   react: SiReact,
@@ -28,7 +31,6 @@ export function Skills() {
     })
   }, [])
 
-
   useEffect(() => {
     if (!cardsRef.current?.length) return
     const io = new IntersectionObserver(
@@ -40,7 +42,7 @@ export function Skills() {
           }
         })
       },
-      { threshold: 0.12 }
+      { threshold: 0.15 }
     )
     cardsRef.current.forEach((el) => el && io.observe(el))
     return () => io.disconnect()
@@ -50,24 +52,25 @@ export function Skills() {
 
   return (
     <section id="skills" className={styles.section}>
-      <h2 className={styles.title}>Skills</h2>
+      <h2 className={styles.title}>Toolkit Arsenal</h2>
+      <p className={styles.description}>Tools and libraries I use in production.</p>
+     
 
-      <ul className={styles.grid}>
+      <ul className={styles.list}>
         {skills.map((s, i) => {
           const Icon = ICONS[s.icon] || ICONS.react
           return (
             <li
               key={s.id || i}
-              className={`${styles.card} ${styles.reveal}`}
+              className={`${styles.item} ${styles.reveal}`}
               ref={(el) => (cardsRef.current[i] = el)}
             >
               <div className={styles.iconWrap} aria-hidden>
                 <Icon />
               </div>
-              <div className={styles.meta}>
-                <div className={styles.name}>{s.title || 'Skill'}</div>
-                {s.desc && <div className={styles.desc}>{s.desc}</div>}
-              </div>
+
+              <h3 className={styles.name}>{s.title || 'Skill'}</h3>
+              {s.desc && <p className={styles.itemDesc}>{s.desc}</p>}
             </li>
           )
         })}

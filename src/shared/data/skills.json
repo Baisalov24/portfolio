@@ -1,13 +1,12 @@
 [
-  { "id": "react", "title": "React", "icon": "react", "desc": "SPA, hooks, composition" },
-  { "id": "ts", "title": "TypeScript", "icon": "typescript", "desc": "description" },
-  { "id": "js", "title": "JavaScript", "icon": "javascript", "desc": "ES6+, async/await" },
-  { "id": "redux", "title": "Redux Toolkit", "icon": "redux", "desc": "Slices, RTK Query" },
-  { "id": "html", "title": "HTML5", "icon": "html", "desc": "description" },
-  { "id": "css", "title": "CSS / SCSS", "icon": "css", "desc": "description" },
-  { "id": "git", "title": "Git", "icon": "git", "desc": "Branching, PR flow, code review." },
-  { "id": "docker", "title": "Docker", "icon": "docker", "desc": "description" },
-  { "id": "mui", "title": "MUI", "icon": "mui", "desc": "description" },
-  { "id": "tailwind", "title": "Tailwind", "icon": "tailwind", "desc": "description" },
-  { "id": "auth0", "title": "Auth0", "icon": "auth0", "desc": "description" }
+  { "id": "react", "title": "React", "icon": "react", "desc": "In React projects, I built reusable components to streamline development and maintain consistency across applications." },
+  { "id": "ts", "title": "TypeScript", "icon": "typescript", "desc": "I adopted TypeScript to enhance JavaScript code reliability and maintainability, leveraging its static typing to catch errors early and ensure type safety across the application." },
+  { "id": "js", "title": "JavaScript", "icon": "javascript", "desc": "I utilized JavaScript to add interactivity to web pages, from simple animations to complex application logic." },
+  { "id": "redux", "title": "Redux Toolkit", "icon": "redux", "desc": "I integrated Redux into React applications for predictable state management, ensuring a unidirectional data flow and centralized state." },
+  { "id": "html", "title": "HTML5", "icon": "html", "desc": "I leveraged HTML to structure web content, ensuring semantic markup for accessibility and SEO optimization." },
+  { "id": "css", "title": "CSS / SCSS", "icon": "css", "desc": "With CSS, I styled web interfaces to match design mockups precisely, employing CSS3 features for animations, transitions, and responsive layouts." },
+  { "id": "git", "title": "Git", "icon": "git", "desc": "With Git, followed a structured branching strategy (feature branches, pull requests, code reviews) to ensure clean version control and smooth collaboration within the team." },
+  { "id": "docker", "title": "Docker", "icon": "docker", "desc": "With Docker, containerized applications to provide consistent development environments and improve deployment reliability." },
+  { "id": "tailwind", "title": "Tailwind", "icon": "tailwind", "desc": "With Tailwind CSS, built responsive and scalable UI components using a utility-first approach while keeping the design system consistent." },
+  { "id": "auth0", "title": "Auth0", "icon": "auth0", "desc": "With Auth0, integrated secure authentication with login, signup, token-based authorization, and protected routes in frontend applications." }
 ]

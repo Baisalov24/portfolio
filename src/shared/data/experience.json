@@ -1,19 +1,27 @@
 [
     {
       "id": 1,
-      "title": "Frontend Developer",
+      "title": "Frontend Developer React",
       "description":
-        "description",
-      "company": "-",
-      "date": "-"
+        "Worked on building and maintaining scalable, production-ready web applications using React, TypeScript, Redux Toolkit, and RTK Query. Implemented Feature-Sliced Design (FSD) to improve project architecture, resulting in 30% faster development speed and easier maintainability for future features. Developed responsive and high-performance UI, improving page load speed by ~25% using code splitting, lazy loading, and image optimization. Integrated REST API and WebSocket real-time communication for features like notifications and live updates",
+      "company": "JunoTech",
+      "date": "November 2023 - June 2025"
     },
 
     {
       "id": 2,
-      "title": "DevOps engineer",
+      "title": "DevOps Engineer Intern",
       "description":
-        "description",
-      "company": "-",
-      "date": "-"
+        "Assisted in setting up and maintaining CI/CD pipelines and development infrastructure, working closely with the DevOps and engineering teams. Focused on improving deployment reliability and developer productivity.Gained hands-on experience with Docker for creating and managing containerized development environments. Helped configure CI/CD pipelines using GitHub Actions / GitLab CI to automate builds and deployments",
+      "company": "Plazz.Ag",
+      "date": "October 2022 - June 2023"
+    },
+    {
+      "id": 3,
+      "title": "Frontend Layout Developer (HTML/CSS)",
+      "description":
+        "Worked on creating responsive and pixel-perfect user interfaces based on Figma designs. Focused on clean, semantic layout and cross-browser compatibility. Converted Figma UI mockups into adaptive HTML/CSS layouts with attention to pixel-perfect accuracy. Used Flexbox, CSS Grid, and BEM methodology to build structured and maintainable UI components. Ensured responsive behavior across desktop, tablet, and mobile breakpoints",
+      "company": "LLC DiGi",
+      "date": "December 2021 - August 2022"
     }
   ]

@@ -4,5 +4,3 @@ export const NAV = [
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
-
-

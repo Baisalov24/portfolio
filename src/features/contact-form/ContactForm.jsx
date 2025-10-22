@@ -67,7 +67,6 @@ export function ContactForm() {
 
   return (
     <div className={styles.wrap}>
-      {/* Toast */}
       {toast && (
         <div
           className={`${styles.toast} ${
