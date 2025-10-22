@@ -16,3 +16,12 @@ a {
     text-decoration: underline;
   }
 }
+
+:root {
+  --header-h: 64px;
+}
+
+
+html { scroll-behavior: smooth; }
+
+[id] { scroll-margin-top: var(--header-h); }
