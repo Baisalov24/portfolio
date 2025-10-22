@@ -15,17 +15,14 @@ export function Experience() {
   const [items, setItems] = useState([])
   const refs = useRef([])
 
-
   useEffect(() => {
     import('../../shared/data/experience.json').then((m) => {
-      const arr = Array.isArray(m.default) ? m.default : []
-      setItems(arr)
+      setItems(Array.isArray(m.default) ? m.default : [])
     })
   }, [])
 
-
+ 
   useEffect(() => {
-    if (!refs.current?.length) return
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -35,7 +32,7 @@ export function Experience() {
           }
         })
       },
-      { threshold: 0.15 }
+      { threshold: 0.2 }
     )
     refs.current.forEach((el) => el && io.observe(el))
     return () => io.disconnect()
@@ -52,34 +49,36 @@ export function Experience() {
 
         <ul className={styles.list}>
           {items.map((it, idx) => {
-            const date = it.date || it.period || ''
-            const title = it.title || it.position || 'Experience'
-            const company = it.company || it.org || ''
-            const description = it.description || it.desc || ''
+            const sideClass = idx % 2 === 0 ? styles.right : styles.left
+            const revealSide = idx % 2 === 0 ? styles.revealRight : styles.revealLeft
 
             return (
               <li
-                key={it.id || idx}
-                className={`${styles.item} ${styles.reveal}`}
+                key={it.id ?? idx}
+                className={`${styles.item} ${sideClass} ${styles.reveal} ${revealSide}`}
                 ref={(el) => (refs.current[idx] = el)}
               >
-                
                 <span className={styles.dot} />
 
-                
                 <article className={styles.card}>
                   <header className={styles.cardHeader}>
                     <div className={styles.iconWrap}>
                       <BriefcaseIcon />
                     </div>
                     <div className={styles.meta}>
-                      {date && <div className={styles.date}>{date}</div>}
-                      <h3 className={styles.cardTitle}>{title}</h3>
-                      {company && <div className={styles.company}>{company}</div>}
+                      {(it.date || it.period) && (
+                        <div className={styles.date}>{it.date || it.period}</div>
+                      )}
+                      <h3 className={styles.cardTitle}>{it.title || it.position || 'Experience'}</h3>
+                      {(it.company || it.org) && (
+                        <div className={styles.company}>{it.company || it.org}</div>
+                      )}
                     </div>
                   </header>
 
-                  {description && <p className={styles.desc}>{description}</p>}
+                  {(it.description || it.desc) && (
+                    <p className={styles.desc}>{it.description || it.desc}</p>
+                  )}
                 </article>
               </li>
             )

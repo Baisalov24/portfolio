@@ -2,11 +2,32 @@
 @use './variables';
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', system-ui, -apple-system, Roboto, Arial, sans-serif;
-  line-height: 1.5;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background-color: #010824;
+  color: #eee;
+  font-size: 15px;
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(to right, transparent 0 49px, #eee1 49px),
+    linear-gradient(to bottom, transparent 0 49px, #eee1 49px);
+  background-size: 50px 50px;
+
+  &::before {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    content: "";
+    background-image: linear-gradient(to right, #d02e23, #7a43b6);
+    z-index: -1;
+    top: -200px;
+    left: calc(50% - 200px);
+    border-radius: 50% 50% 0% 0%;
+    pointer-events: none;
+    filter: blur(250px);
+  }
 }
+
 
 a {
   color: var(--accent);
